@@ -45,7 +45,11 @@ public class ObjectAnimatorFragment extends Fragment {
     startButton.setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View view) {
         AnimatorSet animatorSet = new AnimatorSet();
-        // TODO play together all object animators using animator set, set duration and start
+        animatorSet.playTogether(getTopButtonObjectAnimator(), getBottomButtonObjectAnimator(),
+            getMiddleObjectAnimator(mMiddleLeftView), getMiddleObjectAnimator(mMiddleImage),
+            getMiddleObjectAnimator(mMiddleRightView));
+        animatorSet.setDuration(ANIMATION_DURATION);
+        animatorSet.start();
         toggle = !toggle;
       }
     });
@@ -53,17 +57,20 @@ public class ObjectAnimatorFragment extends Fragment {
   }
 
   private ObjectAnimator getTopButtonObjectAnimator() {
-    // TODO return top button object animator
-    return null;
+    return ObjectAnimator.ofFloat(mTopButton, View.TRANSLATION_Y,
+        toggle ? -mTopButtonTranslationY : 0);
   }
 
   private ObjectAnimator getBottomButtonObjectAnimator() {
-    // TODO return bottom button object animator
-    return null;
+    return ObjectAnimator.ofFloat(mBottomButton, View.TRANSLATION_Y,
+        toggle ? -mBottomButtonTranslationY : 0);
   }
 
   private ObjectAnimator getMiddleObjectAnimator(View view) {
-    // TODO return middle views object animator
-    return null;
+    PropertyValuesHolder propertyTranslationY =
+        PropertyValuesHolder.ofFloat(View.TRANSLATION_Y, toggle ? -mMiddleImageTranslationY : 0);
+    PropertyValuesHolder propertyAlpha =
+        PropertyValuesHolder.ofFloat(View.ALPHA, toggle ? 1f : 0);
+    return ObjectAnimator.ofPropertyValuesHolder(view, propertyTranslationY, propertyAlpha);
   }
 }
