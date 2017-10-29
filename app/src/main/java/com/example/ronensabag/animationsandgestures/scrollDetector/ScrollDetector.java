@@ -26,21 +26,27 @@ public class ScrollDetector extends GestureDetector.SimpleOnGestureListener impl
 
   @Override
   public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
-    // TODO calculate the new scroll percentage and call to scrollPercentageUpdate
+    float newScroll = mLastScroll + distanceY;
+    newScroll = Math.max(0, newScroll);
+    newScroll = Math.min(mMaxScroll, newScroll);
+    if (newScroll != mLastScroll) {
+      float percentage = newScroll / mMaxScroll;
+      if (mListener != null) {
+        mListener.onScrollPercentageUpdate(percentage);
+      }
+      mLastScroll = newScroll;
+    }
     return super.onScroll(e1, e2, distanceX, distanceY);
   }
 
   @Override
   public boolean onDown(MotionEvent e) {
-    // TODO this method override the gesture detector listener, need to return true so
-    // the gesture detector will continue to listener to touch events
-    return false;
+    return true;
   }
 
   @SuppressLint("ClickableViewAccessibility")
   @Override
   public boolean onTouch(View view, MotionEvent motionEvent) {
-    // TODO should delegate this call to gesture detector
-    return false;
+    return gestureDetector.onTouchEvent(motionEvent);
   }
 }
