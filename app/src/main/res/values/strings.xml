@@ -1,0 +1,36 @@
+<resources>
+  <string name="app_name">Animations And Gestures</string>
+  <string name="title_show_touch_events">Touch Events</string>
+  <string name="title_toggle_listener">Toggle Listener</string>
+  <string name="title_gestures_detector">Gestures Detector</string>
+  <string name="title_activity_touch_system">Touch System</string>
+  <string name="android_touch_system">Android Touch System</string>
+  <string name="scroll_detector">Scroll Detector</string>
+  <string name="property_animation">Property Animation</string>
+  <string name="final_work">Final Work</string>
+  <string name="title_activity_property_animation">Property Animation</string>
+  <string name="title_activity_final_work">FinalWorkActivity</string>
+  <string name="touch_screen_icon">touch screen icon</string>
+  <string name="scroll_screen_icon">scroll screen icon</string>
+  <string name="animation_screen_icon">animation screen icon</string>
+  <string name="scroll_animation_screen_icon">scroll animation screen icon</string>
+  <string name="sharedIconToBottomTabs">sharedIconToBottomTabs</string>
+  <string name="enable_full_log">enable full log</string>
+  <string name="add_touch_listener">add touch listener</string>
+  <string name="touch_me">Touch Me</string>
+  <string name="switch_default_title">switch</string>
+  <string name="delete_logs">delete logs</string>
+  <string name="default_expend_view_text">0%</string>
+  <string name="expand_view_pattern">%%%d</string>
+  <string name="please_checkout_what">Please checkout what</string>
+  <string name="coming_from_me">Coming from me</string>
+  <string name="start">Start</string>
+  <string name="interpolator_title">Interpolator</string>
+  <string name="object_animator_title">Object Animator</string>
+  <string name="middle_image">middle image</string>
+  <string name="accelerate_interpolator_image">accelerate interpolator image</string>
+  <string name="decelerate_interpolator_image">decelerate interpolator image</string>
+  <string name="accelerate_decelerate_interpolator_image">accelerate decelerate interpolator image</string>
+  <string name="overshot_interpolator_image">overshot interpolator image</string>
+  <string name="bounce_interpolator_image">bounce interpolator image</string>
+</resources>
