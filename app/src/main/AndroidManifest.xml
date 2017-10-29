@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ronensabag.animationsandgestures">
+
+  <application
+      android:allowBackup="true"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:supportsRtl="true"
+      android:theme="@style/AppTheme">
+    <activity
+        android:name=".screenSelector.ScreenSelectorActivity"
+        android:label="@string/app_name">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+    <activity
+        android:name=".scrollDetector.ScrollDetectorActivity"
+        android:label="@string/scroll_detector"
+        android:theme="@style/AppTheme"/>
+    <activity
+        android:name=".touchSystem.TouchSystemActivity"
+        android:label="@string/title_activity_touch_system"
+        android:theme="@style/AppTheme"/>
+    <activity
+        android:name=".propertyAnimation.PropertyAnimationActivity"
+        android:label="@string/title_activity_property_animation"
+        android:theme="@style/AppTheme"/>
+    <activity
+        android:name=".finalWork.FinalWorkActivity"
+        android:label="@string/title_activity_final_work"
+        android:theme="@style/AppTheme">
+    </activity>
+  </application>
+
+</manifest>

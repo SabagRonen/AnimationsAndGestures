@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item
+      android:id="@+id/navigation_touch_events"
+      android:icon="@drawable/ic_touch_app_black_24dp"
+      android:title="@string/title_show_touch_events"/>
+
+  <item
+      android:id="@+id/navigation_toggle_listener"
+      android:icon="@drawable/ic_hearing_black_24dp"
+      android:title="@string/title_toggle_listener"/>
+
+  <item
+      android:id="@+id/navigation_gesture_detector"
+      android:icon="@drawable/ic_gesture_black_24dp"
+      android:title="@string/title_gestures_detector"/>
+
+</menu>
