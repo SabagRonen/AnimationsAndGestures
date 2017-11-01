@@ -90,9 +90,13 @@ public class ScreenSelectorActivity extends AppCompatActivity {
         break;
       case R.id.scrollScreenText:
         startActivity(new Intent(this, ScrollDetectorActivity.class));
+        overridePendingTransition(R.anim.start_scroll_detector_activity_in,
+            R.anim.start_scroll_detector_activity_out);
         break;
       case R.id.animationScreenText:
         startActivity(new Intent(this, PropertyAnimationActivity.class));
+        overridePendingTransition(R.anim.start_animation_activity_in,
+            R.anim.start_animation_activity_out);
         break;
       case R.id.scrollAnimationScreenText:
         startActivity(new Intent(this, FinalWorkActivity.class));

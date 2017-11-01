@@ -42,4 +42,10 @@ public class PropertyAnimationActivity extends AppCompatActivity {
     }
     return super.onOptionsItemSelected(item);
   }
+
+  @Override public void onBackPressed() {
+    super.onBackPressed();
+    overridePendingTransition(R.anim.close_animation_activity_in,
+        R.anim.close_animation_activity_out);
+  }
 }

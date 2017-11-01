@@ -36,6 +36,12 @@ public class ScrollDetectorActivity extends AppCompatActivity {
     return super.onOptionsItemSelected(item);
   }
 
+  @Override public void onBackPressed() {
+    super.onBackPressed();
+    overridePendingTransition(R.anim.close_scroll_detector_activity_in,
+        R.anim.close_scroll_detector_activity_out);
+  }
+
   @SuppressLint("ClickableViewAccessibility")
   private void initExpendView(final float expandViewMinHeight, float expandViewMaxHeight) {
     final TextView expendableView = findViewById(R.id.expendableView);

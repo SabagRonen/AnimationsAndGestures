@@ -33,4 +33,5 @@
   <string name="accelerate_decelerate_interpolator_image">accelerate decelerate interpolator image</string>
   <string name="overshot_interpolator_image">overshot interpolator image</string>
   <string name="bounce_interpolator_image">bounce interpolator image</string>
+  <string name="start_animation">start animation</string>
 </resources>
